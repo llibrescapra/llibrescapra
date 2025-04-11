@@ -23,34 +23,41 @@
       text-align: center;
     }
     header img {
-      max-width: 100px;
+      max-width: 100%;
       height: auto;
     }
-    nav {
-      text-align: center;
-      margin: 2rem 0;
-    }
-    nav a {
-      margin: 0 1rem;
-      text-decoration: none;
-      color: #444;
-      font-weight: bold;
-    }
-    section {
+
+    /* Estructura de dues columnes per seccions */
+    .section-flex {
+      display: flex;
+      gap: 2rem;
+      align-items: flex-start;
       margin-bottom: 2rem;
     }
-    h2 {
+    .section-title {
+      flex: 1;
+      text-align: right;
+      color: #e67e22;
       font-size: 1.4rem;
       border-bottom: 2px solid #ddd;
       padding-bottom: 0.5rem;
-      margin-bottom: 1rem;
-      color: #e67e22;
     }
+    .section-content {
+      flex: 3;
+    }
+
     .catalegs a {
       display: block;
       margin-bottom: 0.5rem;
       color: #0066cc;
     }
+    .hora, .contacte-info {
+      font-weight: 600;
+    }
+    #horaris p, #contacte p {
+      line-height: 2.2;
+    }
+
     footer {
       text-align: center;
       padding: 1rem;
@@ -65,22 +72,14 @@
       border-radius: 8px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.2);
     }
-    .hora, .contacte-info {
-      font-weight: 600;
-    }
-    #horaris p, #contacte p {
-      line-height: 2.2;
-    }
+
     @media (max-width: 600px) {
-      .contacte p, .horaris p {
-        padding: 0 1rem;
-        font-size: 1rem;
+      .section-flex {
+        flex-direction: column;
+        text-align: left;
       }
-      .logo {
-        max-width: 100%;
-        height: auto;
-        display: block;
-        margin: 0 auto;
+      .section-title {
+        text-align: left;
       }
     }
   </style>
@@ -91,31 +90,37 @@
       <img src="llibres-capra-logo.png" alt="Llibres Capra" class="logo">
     </header>
 
-    <section id="catalegs" class="catalegs">
-      <h2>Catàlegs</h2>
-      <a href="https://www.iberlibro.com/llibres-capra-barcelona/55182331/sf" target="_blank">Iberlibro</a>
-      <a href="https://www.todocoleccion.net/s/catalogo?identificadorvendedor=llibrescapra" target="_blank">Todocolección</a>
-      <a href="https://www.uniliber.com/librerias/llibres-capra_164124/" target="_blank">Uniliber</a>
+    <section id="catalegs" class="section-flex">
+      <div class="section-title">Catàlegs</div>
+      <div class="section-content catalegs">
+        <a href="https://www.iberlibro.com/llibres-capra-barcelona/55182331/sf" target="_blank">Iberlibro</a>
+        <a href="https://www.todocoleccion.net/s/catalogo?identificadorvendedor=llibrescapra" target="_blank">Todocolección</a>
+        <a href="https://www.uniliber.com/librerias/llibres-capra_164124/" target="_blank">Uniliber</a>
+      </div>
     </section>
 
-    <section id="horaris">
-      <h2>Horaris</h2>
-      <p>
-        Dilluns a divendres: <span class="hora">11.00-13.45h</span><br>
-        Dimarts, dimecres i dijous: <span class="hora">17.00-20.00h</span><br>
-        Primer dissabte de cada mes: <span class="hora">10.00-14.00h</span>
-      </p>
+    <section id="horaris" class="section-flex">
+      <div class="section-title">Horaris</div>
+      <div class="section-content">
+        <p>
+          Dilluns a divendres: <span class="hora">11.00-13.45h</span><br>
+          Dimarts, dimecres i dijous: <span class="hora">17.00-20.00h</span><br>
+          Primer dissabte de cada mes: <span class="hora">10.00-14.00h</span>
+        </p>
+      </div>
     </section>
 
-    <section id="contacte">
-      <h2>Contacte</h2>
-      <p>
-        Adreça: <span class="contacte-info">carrer Jaume Roig, 35 Barcelona 08028</span><br>
-        Telèfon: <span class="contacte-info">930426321</span><br>
-        Mail: <span class="contacte-info">llibrescapra@gmail.com</span><br>
-        Xarxes: <span class="contacte-info">@llibrescapra</span>
-      </p>
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2993.874012267767!2d2.1229592765771583!3d41.37682189664968!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a499ff99cc73f5%3A0x5bc7314b56a970a6!2sLlibres%20Capra!5e0!3m2!1sca!2ses!4v1744283377928!5m2!1sca!2ses" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <section id="contacte" class="section-flex">
+      <div class="section-title">Contacte</div>
+      <div class="section-content">
+        <p>
+          Adreça: <span class="contacte-info">carrer Jaume Roig, 35 Barcelona 08028</span><br>
+          Telèfon: <span class="contacte-info">930426321</span><br>
+          Mail: <span class="contacte-info">llibrescapra@gmail.com</span><br>
+          Xarxes: <span class="contacte-info">@llibrescapra</span>
+        </p>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2993.874012267767!2d2.1229592765771583!3d41.37682189664968!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a499ff99cc73f5%3A0x5bc7314b56a970a6!2sLlibres%20Capra!5e0!3m2!1sca!2ses!4v1744283377928!5m2!1sca!2ses" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
     </section>
 
     <footer>
