@@ -6,18 +6,6 @@
   <title>Llibres Capra</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
   <style>
-    nav a:hover,
-    .catalegs a:hover {
-      color: #e67e22;
-      text-decoration: underline;
-      transition: color 0.3s ease, text-decoration 0.3s ease;
-    }
-
-    h2:hover {
-      color: #d35400;
-      transition: color 0.3s ease;
-    }
-
     body {
       margin: 0;
       font-family: 'Montserrat', sans-serif;
@@ -25,30 +13,27 @@
       background-size: cover;
       color: #222;
     }
-
     .container {
       background-color: rgba(255, 255, 255, 0.95);
       margin: 0 auto;
       padding: 2rem;
       max-width: 900px;
     }
-
     header {
       text-align: center;
     }
-
     header img {
       max-width: 100%;
       height: auto;
     }
 
+    /* Estructura de dues columnes per seccions */
     .section-flex {
       display: flex;
       gap: 2rem;
       align-items: flex-start;
       margin-bottom: 2rem;
     }
-
     .section-title {
       flex: 1;
       text-align: right;
@@ -57,7 +42,6 @@
       border-bottom: 2px solid #ddd;
       padding-bottom: 0.5rem;
     }
-
     .section-content {
       flex: 3;
     }
@@ -67,23 +51,11 @@
       margin-bottom: 0.5rem;
       color: #0066cc;
     }
-
     .hora, .contacte-info {
       font-weight: 600;
     }
-
     #horaris p, #contacte p {
       line-height: 2.2;
-    }
-
-    .mapa {
-      display: block;
-      margin: 2rem auto;
-      width: 300px;
-      height: 300px;
-      border: 0;
-      border-radius: 8px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
     }
 
     footer {
@@ -92,19 +64,22 @@
       font-size: 0.9rem;
       color: #666;
     }
+    iframe {
+      width: 100%;
+      height: 300px;
+      border: 0;
+      margin-top: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
 
     @media (max-width: 600px) {
       .section-flex {
         flex-direction: column;
         text-align: left;
       }
-
       .section-title {
         text-align: left;
-      }
-
-      .mapa {
-        max-width: 90%;
       }
     }
   </style>
@@ -146,7 +121,6 @@
         </p>
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2993.874012267767!2d2.1229592765771583!3d41.37682189664968!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a499ff99cc73f5%3A0x5bc7314b56a970a6!2sLlibres%20Capra!5e0!3m2!1sca!2ses!4v1744283377928!5m2!1sca!2ses" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
-      </div>
     </section>
 
     <footer>
@@ -155,4 +129,3 @@
   </div>
 </body>
 </html>
-
